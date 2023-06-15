@@ -44,26 +44,30 @@ _Note: please submit the processed dataset too._
 
 ## Section 2: Databases
 
-You are appointed by the above e-commerce company to create a database infrastructure for their sales transactions. Purchases are being made by members of the e-commerce company on their website (you may use the first 50 members of a processed dataset from Section 1). Members can make multiple purchases. 
+### Option 1
 
-The following are known for each item listed for sale on the e-commerce website:
+You are appointed by the applications team in an e-commerce company to create a database infrastructure for their sales transactions. Purchases are being made by members of the e-commerce company on their website. A member can purchase any number of products within a single transaction.
+
+The following are known for each product listed for sale on the e-commerce website:
 - Item Name
 - Manufacturer Name
 - Cost
 - Weight (in kg)
 
-Each transaction made by a member contains the following information:
+Each transaction made by a member should minimally contain the following information:
 - Membership ID
-- Items bought (could be one item or multiple items)
-- Total items price
-- Total items weight
+- Item(s) bought
+- Date of transaction
 
-Set up a PostgreSQL database using the Docker [image](https://hub.docker.com/_/postgres) provided. We expece at least a Dockerfile which will stand up your database with the DDL statements to create the necessary tables. You are required to produce  entity-relationship diagrams as necessary to illustrate your design. 
+i) Draw an entity-relationship diagram to represent the data models required to fulfill the above requirements. **Please submit your design in an image format (e.g. `.jpg`/`.png`)**
 
-Analysts from the e-commerce company will need to query some information from the database. Below are 2 of the sameple queries from the analysts. Do note to design your database to account for a wide range of business use cases and queries. 
-You are tasked to write a SQL statement for each of the following task:
-1. Which are the top 10 members by spending
-2. Which are the top 3 items that are frequently brought by members
+ii) You are also tasked to build and deploy your design in i). Set up your database using PostgreSQL with the Docker [image](https://hub.docker.com/_/postgres) provided. **You are required to submit the DDL statements for the tables, and the necessary scripts to deploy the Docker image (minimally a Dockerfile)**.
+
+iii) Additionally, you are requested to justify your database design by providing the relevant SQL queries to satisfy some of their requirements. You are provided the following sample scenarios:
+- Get the total cost of item(s) purchased by a member in a transaction
+- A manufacturer rebranding resulted in a change of the manufacturer's name only
+
+**Please submit the queries for use to satisfy the above scenarios.**
 
 ## Section 3: System Design
 
