@@ -80,7 +80,7 @@ Some of the use cases the users are required to report on can be:
 ``` 
 For convenience of testing, the following constraints are given:
 - Date range can be from January 2022 to December 2022 (inclusive)
-- For questions towards time constraints, the column {remaining_lease} can be disregarded. We will only look at the lease by year.
+- For questions towards time factors, the column {remaining_lease} can be disregarded. We will only look at the lease by year.
 ```
 
 i) Draw an entity-relationship diagram to represent the data models required to fulfill the above requirements. **Please submit your design in an image format (e.g. `.jpg`/`.png`)**
