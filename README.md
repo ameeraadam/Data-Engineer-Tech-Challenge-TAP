@@ -1,13 +1,11 @@
 # Data Engineer Tech Challenge TAP -2023
 
-This test is split into 6 sections
+This test is split into 4 sections
 
 1. **data pipelines**
 2. **databases**
 3. **system design**
-4. **charts & APIs**
-5. **machine learning**
-6. **presentation**
+4. **presentation**
 
 ## Submission Guidelines
 
@@ -20,7 +18,7 @@ Dos:
 - Clear documentation
 - Comments in your code
 
-Donts:
+Don'ts:
 
 - Only one commit containing all the files
 - Submitting a zip file
@@ -29,20 +27,31 @@ Donts:
 
 ## Section 1: Data Pipelines
 
-The objective of this section is to design and implement a solution to process a data file on a regular interval (e.g. daily). Assume that there are 2 data files `dataset1.csv` and `dataset2.csv`, design a solution to process these files, along with the scheduling component. The expected output of the processing task is a CSV file including a header containing the field names.
+An e-commerce company requires that users sign up for a membership on their websire in order to purchase a product from the platform. As a data engineer under this company, you are required to design and implement a product pipeline to process the membership applications submitted by users. 
 
-You can use common scheduling solutions such as `cron` or `airflow` to implement the scheduling component. You may assume that the data file will be available at 1am everyday. Please provide documentation (a markdown file will help) to explain your solution.
+Applications are batched into a verying number of datasets and dropped into a folder on an hourly basis. You are required to set up a pipeline to ingest, clean, perform validity checks, and create membership IDs for successful applicants. Applications are considered successful if:
+- mobile number is 8 digits (excluding country code)
+- applicant is over 18 years old as of application year (i.e. 2023)
+- applicant has a valid email (email ends with @emailprovider.com or @emailprovider.net)
 
-Processing tasks:
+You are required to format processed datasets in the following manner:
+- Provide `first_name` and `last_name` columns
+- Provide a `date_of_birth` column with the format **YYYYMMDD**
+- Remove any rows which do not contain a name field. You are to treat this as unsuccessful applications.
+- Create a new field `above_18` based on the applicant's birthday. Applications that don't fulfil the age criteria should be treated as unsuccessful applications. 
+- Membership IDs for successful applications shuold be the applicant's last name, followed by a SHA_256 hash of his/her birthday, truncated to the first 5 digits of the hash (i.e .<last_name>_<hash(YYYYMMDD)>)
 
-- Split the `name` field into `first_name`, and `last_name`
-- Remove any zeros prepended to the `price` field
-- Delete any rows which do not have a `name`
-- Create a new field named `above_100`, which is `true` if the price is strictly greater than 100
+In addition, specifiy a **test plan** as you create the pipeline.
+
+You are required to consolidate these datasets and output both successful and unsuccessful applications into **separate** folders for downstream follow-up by other engineers. As an additional requirement, these engineers should be alerted when the datsets have been processed. A message should be sent to the engineers regarding the quality of the recently processed dataset. Provide a sample of the alert message that will be produced on processing **application_dataset1.csv**. The message should **minimally** contain:
+- number of rows processed
+- number successful applications, include successful file name
+- number of unsuccessful applications, include unsuccessful file name
+- **include any other data quality metrics that you deem necessary**
 
 _Note: please submit the processed dataset too._
 
-## Section 2: Databases
+## Section 2: Databases 
 
 You are appointed by a car dealership to create their database infrastructure. There is only one store. In each business day, cars are being sold by a team of salespersons. Each transaction would contain information on the date and time of transaction, customer transacted with, and the car that was sold.
 
@@ -83,26 +92,6 @@ The company would like to save processed images for a minimum of **7 days for ar
 Produce a system architecture diagram (e.g. Visio, Powerpoint) using any of the commercial cloud providers' ecosystem to explain your design. Please also indicate clearly if you have made any assumptions at any point.
 
 Share about the `pros` and `cons` of your design to justify the decisions you have made.
-
-## Section 4: Charts and APIs
-
-Your team decided to design a dashboard to display the statistic of COVID19 cases. You are tasked to display one of the components of the dashboard which is to display a visualisation representation of number of COVID19 cases in Singapore over time.
-
-Your team decided to use the public data from https://documenter.getpostman.com/view/10808728/SzS8rjbc#b07f97ba-24f4-4ebe-ad71-97fa35f3b683.
-
-Display a graph to show the number cases in Singapore over time using the APIs from https://covid19api.com/.
-
-_Note: please submit screenshots of the dashboard_
-
-## Section 5: Machine Learning
-
-Using the dataset from https://archive.ics.uci.edu/ml/datasets/Car+Evaluation, create a machine learning model to predict the buying price given the following parameters:
-
-- Maintenance = High
-- Number of doors = 4
-- Lug Boot Size = Big
-- Safety = High
-- Class Value = Good
 
 ## Section 6: What is Data Engineering?
 
