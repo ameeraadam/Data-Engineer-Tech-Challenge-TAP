@@ -44,33 +44,26 @@ _Note: please submit the processed dataset too._
 
 ## Section 2: Databases
 
-You are appointed by a car dealership to create their database infrastructure. There is only one store. In each business day, cars are being sold by a team of salespersons. Each transaction would contain information on the date and time of transaction, customer transacted with, and the car that was sold.
+You are appointed by the above e-commerce company to create a database infrastructure for their sales transactions. Purchases are being made by members of the e-commerce company on their website (you may use the first 50 members of a processed dataset from Section 1). Members can make multiple purchases. 
 
-The following are known:
+The following are known for each item listed for sale on the e-commerce website:
+- Item Name
+- Manufacturer Name
+- Cost
+- Weight (in kg)
 
-- Each car can only be sold by one salesperson.
-- There are multiple manufacturers’ cars sold.
-- Each car has the following characteristics:
-- Manufacturer
-- Model name
-- Serial number
-- Weight
-- Price
+Each transaction made by a member contains the following information:
+- Membership ID
+- Items bought (could be one item or multiple items)
+- Total items price
+- Total items weight
 
-Each sale transaction contains the following information:
+Set up a PostgreSQL database using the Docker [image](https://hub.docker.com/_/postgres) provided. We expece at least a Dockerfile which will stand up your database with the DDL statements to create the necessary tables. You are required to produce  entity-relationship diagrams as necessary to illustrate your design. 
 
-- Customer Name
-- Customer Phone
-- Salesperson
-- Characteristics of car sold
-
-Set up a PostgreSQL database using the base `docker` image [here](https://hub.docker.com/_/postgres) given the above. We expect at least a `Dockerfile` which will stand up your database with the DDL statements to create the necessary tables. Produce entity-relationship diagrams as necessary to illustrate your design.
-
-Your team also needs you to query some information from the database that you have designed. Note that the business requirements for the database is **not limited** to the 2 queries below, do design your database to account a wide range of business use cases. You are tasked to write a `sql` statement for each of the following task:
-
-1. I want to know the list of our customers and their spending.
-
-2. I want to find out the top 3 car manufacturers that customers bought by sales (quantity) and the sales number for it in the current month.
+Analysts from the e-commerce company will need to query some information from the database. Below are 2 of the sameple queries from the analysts. Do note to design your database to account for a wide range of business use cases and queries. 
+You are tasked to write a SQL statement for each of the following task:
+1. Which are the top 10 members by spending
+2. Which are the top 3 items that are frequently brought by members
 
 ## Section 3: System Design
 
