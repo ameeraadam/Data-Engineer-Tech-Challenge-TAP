@@ -74,15 +74,44 @@ Your team also needs you to query some information from the database that you ha
 
 ## Section 3: System Design
 
-Prepare a presentation to your project team on how you plan to design data infrastructure on the cloud for a company whose main business is in processing images. Your role is the `Tech Lead` for this project.
+You are given the role of the `Tech Lead` of a project for a company whose main business is in image processing. 
+This project aims to redesign and shift its existing on-premise infrastructure onto the cloud. 
+Prepare a presentation to your project team on how you plan to design the data 
+infrastructure on the cloud provider of your choice.
 
-The company has a web application which allows users to upload images to the cloud using an API. There is also a separate web application which hosts a Kafka stream that uploads images to the same cloud environment. This Kafka stream has to be managed by the company's engineers.
+```
+Prepare a presentation to your project team on how you plan to design data infrastructure on the cloud for a company 
+whose main business is in processing images. Your role is the `Tech Lead` for this project.
+```
+The company first receives raw images from multiple data sources, before processing them.
+There are 2 data sources for the images:
+1. The company hosts a web application which allows users to upload images to the system using an API.
+2. A second web application connected to a Kafka stream that uploads images to the same system. This Kafka stream has to be managed by the company's engineers.
 
-Code has already been written by the company's software engineers to process the images. This code has to be hosted on the cloud. For archival purposes, the images and its metadata has to be stored in the cloud environment for 7 days, after which it has to be purged from the environment for compliance and privacy. The cloud environment should also host a Business Intelligence resource where the company's analysts can access and perform analytical computation on the data stored.
+```
+The company has a web application which allows users to upload images to the cloud using an API. 
+There is also a separate web application which hosts a Kafka stream that uploads images to the same cloud environment. 
+This Kafka stream has to be managed by the company's engineers.
+```
 
-As a data engineer within the company, you are required to produce a system architecture diagram (Visio, PowerPoint, draw.io) depicting the end-to-end flow of the aforementioned pipeline. You may use any of the cloud providers (e.g. AWS, Azure, GCP) to host the environment. The architecture should specifically address the requirements/concerns above.
+Code has already been written by the company's software engineers to process the images. 
+This code has to be hosted on the cloud. 
 
-Do indicate any assumptions you have made regarding the architecture. You are required to provide a detailed explanation on the diagram.
+For archival purposes, any images and its metadata has to be stored in the cloud environment for 7 days, 
+after which it has to be purged from the environment for compliance and privacy. 
+
+The cloud environment should also host a Business Intelligence resource where the company's analysts can access and 
+perform analytical computation on the data stored.
+
+To ensure that the system is robust, the team would require components that enable effective monitoring, 
+and ease of deployment for engineers.
+
+As a data engineer within the company, you are required to produce a system architecture diagram (e.g. Visio, PowerPoint, draw.io) depicting the end-to-end flow of the aforementioned pipeline. 
+You may use any of the cloud providers (e.g. AWS, Azure, GCP) to host the environment. 
+The architecture should specifically address the requirements/concerns above.
+
+Do indicate any assumptions you have made regarding the architecture. 
+You are required to provide a detailed explanation on the diagram.
 
 ## Section 4: Charts and APIs
 
