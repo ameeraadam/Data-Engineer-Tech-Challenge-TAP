@@ -58,7 +58,7 @@ Additionally, the team requires additional design considerations to the pipeline
 
 You are required to process the **input data provided in this repository** (`dataset1.csv` and `dataset2.csv`), generating
 at least 2 sets of data: successful and unsuccessful applications. 
-These datasets should be easily identified and organised for downstream workloads (not part of this assessment).
+These datasets should be easily identified and organised for downstream workloads (downstream context will not be part of this assessment).
 
 **Please provide the scripts created, and the output data after processing. Ensure that respective files and directories are
 included to enable easier replication for assessment purposes.**
