@@ -43,7 +43,7 @@ You are required to format processed datasets in the following manner:
 
 In addition, specifiy a **test plan** as you create the pipeline.
 
-You are required to consolidate these datasets and output both successful and unsuccessful applications into **separate** folders for downstream follow-up by other engineers. As an additional requirement, these engineers should be alerted when the datsets have been processed. A message should be sent to the engineers regarding the quality of the recently processed dataset. Provide a sample of the alert message that will be produced on processing **application_dataset1.csv**. The message should **minimally** contain:
+You are required to consolidate these datasets and output both successful and unsuccessful applications into **separate** folders for downstream follow-up by other engineers. As an additional requirement, these engineers should be alerted when the datsets have been processed. A message should be sent to the engineers regarding the quality of the recently processed dataset. Provide samples of the alert message that will be produced on processing **all datasets**. The message should **minimally** contain:
 - number of rows processed
 - number successful applications, include successful file name
 - number of unsuccessful applications, include unsuccessful file name
@@ -93,7 +93,7 @@ Produce a system architecture diagram (e.g. Visio, Powerpoint) using any of the 
 
 Share about the `pros` and `cons` of your design to justify the decisions you have made.
 
-## Section 6: What is Data Engineering?
+## Section 4: What is Data Engineering?
 
 You are tasked to help an agency to consolidate data to reduce data silos over a 3 months period. You will prepare a presentation to executive leadership to influence them to sponsor this data engineering initiative.
 
