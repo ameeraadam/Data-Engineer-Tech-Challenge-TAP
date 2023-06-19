@@ -74,34 +74,39 @@ Your team also needs you to query some information from the database that you ha
 
 ## Section 3: System Design
 
-You are given the role of the `Tech Lead` of a project for a company whose main business is in image processing. 
+You are given the role of the `Tech Lead` of a project for a company whose main business is in processing sensor data and ground surveys. 
 This project aims to redesign and shift its existing on-premise infrastructure onto the cloud. 
 Prepare a presentation to your technical project team on how you plan to design the data 
 infrastructure on the cloud provider of your choice.
 
-The company first receives raw images from multiple data sources, before processing them.
-There are 2 data sources for the images:
-1. The company hosts a web application which allows users to upload images to the system using an API.
-2. A second web application connected to a Kafka stream that uploads images to the same system. This Kafka stream has to be managed by the company's engineers.
+The company receives data from multiple sources. There are 2 data sources of data:
 
-Code has already been written by the company's software engineers to process the images. 
-This code has to be hosted on the cloud. 
+1. Sensor data from external sites deliver data to the company via the use of data streams. 
+The stream application are hosted by the company. *For convenience of this assessment, assume there are only 
+1-2 sensor sites pushing data to Kafka consumer(s) in the application.*
 
-For archival purposes, any images and its metadata has to be stored in the cloud environment for 7 days, 
+2. There are surveyors tasked to manually upload survey data on a regular basis. They would upload data to the system 
+via API through a web application hosted by the company.
+
+As the technical lead for the engineering project within the company, you are required to design the system architecture
+depicting the end-to-end flow of every pipeline on the cloud. 
+The architecture should **minimally** address the requirements/concerns below:
+
+- Code has already been written by the company's software engineers to process the data. 
+This code also has to be migrated and hosted on the cloud. 
+
+- For archival purposes, **any data** (raw and processed) has to be stored in the cloud environment for 60 days, 
 after which it has to be purged from the environment for compliance and privacy. 
 
-The cloud environment should also host a Business Intelligence resource where the company's analysts can access and 
+- The cloud environment should also host a Business Intelligence resource where the company's analysts can access and 
 perform analytical computation on the data stored.
 
-To ensure that the system is robust, the team would require components that enable effective monitoring, 
+- To ensure that the system is robust, the team would require components that enable effective monitoring, 
 and ease of deployment for engineers.
 
-As a data engineer within the company, you are required to produce a system architecture diagram (e.g. Visio, PowerPoint, draw.io) depicting the end-to-end flow of the aforementioned pipeline. 
-You may use any of the cloud providers (e.g. AWS, Azure, GCP) to host the environment. 
-The architecture should specifically address the requirements/concerns above.
-
-Do indicate any assumptions you have made regarding the architecture. 
-You are required to provide a detailed explanation on the diagram.
+You are required to produce a system architecture diagram (e.g. `Visio`, `Powerpoint`, `draw.io`) for the above. 
+You may use any of the cloud providers (e.g. `AWS`, `Azure`, `GCP`) to host your environment. 
+Do indicate any assumptions made, and provide detailed explanations to your design considerations.
 
 ## Section 4: Charts and APIs
 
