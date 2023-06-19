@@ -76,23 +76,13 @@ Your team also needs you to query some information from the database that you ha
 
 You are given the role of the `Tech Lead` of a project for a company whose main business is in image processing. 
 This project aims to redesign and shift its existing on-premise infrastructure onto the cloud. 
-Prepare a presentation to your project team on how you plan to design the data 
+Prepare a presentation to your technical project team on how you plan to design the data 
 infrastructure on the cloud provider of your choice.
 
-```
-Prepare a presentation to your project team on how you plan to design data infrastructure on the cloud for a company 
-whose main business is in processing images. Your role is the `Tech Lead` for this project.
-```
 The company first receives raw images from multiple data sources, before processing them.
 There are 2 data sources for the images:
 1. The company hosts a web application which allows users to upload images to the system using an API.
 2. A second web application connected to a Kafka stream that uploads images to the same system. This Kafka stream has to be managed by the company's engineers.
-
-```
-The company has a web application which allows users to upload images to the cloud using an API. 
-There is also a separate web application which hosts a Kafka stream that uploads images to the same cloud environment. 
-This Kafka stream has to be managed by the company's engineers.
-```
 
 Code has already been written by the company's software engineers to process the images. 
 This code has to be hosted on the cloud. 
