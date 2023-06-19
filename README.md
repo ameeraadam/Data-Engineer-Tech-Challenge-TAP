@@ -63,7 +63,7 @@ i) Draw an entity-relationship diagram to represent the data models required to 
 
 ii) You are also tasked to build and deploy your design in i). Set up your database using PostgreSQL with the Docker [image](https://hub.docker.com/_/postgres) provided. **You are required to submit the DDL statements for the tables, and the necessary scripts to deploy the Docker image (minimally a Dockerfile)**.
 
-iii) Additionally, you are requested to justify your database design by providing the relevant SQL queries to satisfy some of their requirements. You are provided the following sample scenarios:
+iii) Additionally, you are requested to justify your database design by providing the relevant SQL queries to satisfy some of their requirements. Some of these requirements include:
 - Get the total cost of item(s) purchased by a member in a transaction
 - A manufacturer rebranding resulted in a change of the manufacturer's name only
 
@@ -77,11 +77,12 @@ Some of the use cases the users are required to report on can be:
 - What are the average resale prices of each flat type in each town?
 - What are the top 10 towns that has resale flats with the oldest lease commence date (by year)
 
-``` 
+
+**Note**:
 For convenience of testing, the following constraints are given:
 - Date range can be from January 2022 to December 2022 (inclusive)
 - For questions towards time factors, the column {remaining_lease} can be disregarded. We will only look at the lease by year.
-```
+
 
 i) Draw an entity-relationship diagram to represent the data models required to fulfill the above requirements. **Please submit your design in an image format (e.g. `.jpg`/`.png`)**
 
