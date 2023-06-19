@@ -49,15 +49,16 @@ You are required to format processed datasets with the following constraints:
 ```
 
 Additionally, the team requires additional design considerations to the pipeline. Such considerations are:
-- Overall summary after each processing job. The summary should be sent as a `string` minimally containing the following details:
-  - number of rows processed
-  - number successful applications, include successful file name
-  - number of unsuccessful applications, include unsuccessful file name
-  - (*include any other data quality metrics that you deem necessary*)
+- Overall summary notification after each processing job. The summary should be generated as a single `string` object, 
+minimally containing the following details:
+  - Number of rows processed
+  - Number of successful applications, including the name of the file generated
+  - Number of unsuccessful applications, including the name of the file generated
+  - (*and any other data quality metrics that you may deem necessary*)
 - A **description of a test plan** to ensure robustness of your design
 
 You are required to process the **input data provided in this repository** (`dataset1.csv` and `dataset2.csv`), generating
-at least 2 sets of data: successful and unsuccessful applications. 
+at least 2 sets of data: `successful` and `unsuccessful` applications. 
 These datasets should be easily identified and organised for downstream workloads (downstream context will not be part of this assessment).
 
 **Please provide the scripts created, and the output data after processing. Ensure that respective files and directories are
