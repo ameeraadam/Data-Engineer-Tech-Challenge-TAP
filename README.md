@@ -75,14 +75,14 @@ Your team also needs you to query some information from the database that you ha
 ## Section 3: System Design
 
 You are given the role of the `Tech Lead` of a project for a company whose main business is in processing sensor data and ground surveys. 
-This project aims to redesign and shift its existing on-premise infrastructure onto the cloud. 
+This project aims to redesign and shift all of its existing on-premise infrastructure onto the cloud. 
 Prepare a presentation to your technical project team on how you plan to design the data 
 infrastructure on the cloud provider of your choice.
 
 The company receives data from multiple sources. There are 2 data sources of data:
 
 1. Sensor data from external sites deliver data to the company via the use of data streams. 
-The stream application are hosted by the company. *For convenience of this assessment, assume there are only 
+The stream application is hosted by the company. *Assume there are only 
 1-2 sensor sites pushing data to Kafka consumer(s) in the application.*
 
 2. There are surveyors tasked to manually upload survey data on a regular basis. They would upload data to the system 
@@ -91,6 +91,7 @@ via API through a web application hosted by the company.
 As the technical lead for the engineering project within the company, you are required to design the system architecture
 depicting the end-to-end flow of every pipeline on the cloud. 
 The architecture should **minimally** address the requirements/concerns below:
+
 
 - Code has already been written by the company's software engineers to process the data. 
 This code also has to be migrated and hosted on the cloud. 
