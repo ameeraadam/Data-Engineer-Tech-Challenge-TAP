@@ -43,10 +43,10 @@ You are required to format processed datasets with the following constraints:
   - The applicant's `last_name`, followed by 
   - a `SHA_256` hash of his/her `date_of_birth`, **truncated to the first 5 digits of the hash** 
 
-*Note: The membership ID of an applicant should be in this format:*
-```
-<last_name>_<hash(date_of_birth)[:5]>
-```
+    *Note: The membership ID of an applicant should be in this format:*
+    ```
+    <last_name>_<hash(date_of_birth)[:5]>
+    ```
 
 Additionally, the team requires additional design considerations to the pipeline. Such considerations are:
 - Overall summary notification after each processing job. The summary should be generated as a single `string` object, 
@@ -57,9 +57,9 @@ minimally containing the following details:
   - (*and any other data quality metrics that you may deem necessary*)
 - A **description of a test plan** to ensure robustness of your design
 
-You are required to process the **input data provided in this repository** (`dataset1.csv` and `dataset2.csv`), generating
+You are required to process the **input data provided in this repository** (`dataset1.csv`, `dataset2.csv`, and `dataset3.csv`), generating
 at least 2 sets of data: `successful` and `unsuccessful` applications. 
-These datasets should be easily identified and organised for downstream workloads (downstream context will not be part of this assessment).
+These datasets should be easily identified and organised for general downstream workloads.
 
 **Please provide the scripts created, and the output data after processing. Ensure that respective files and directories are
 included to enable easier replication for assessment purposes.**
