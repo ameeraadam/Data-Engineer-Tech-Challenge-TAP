@@ -44,33 +44,51 @@ _Note: please submit the processed dataset too._
 
 ## Section 2: Databases
 
-You are appointed by a car dealership to create their database infrastructure. There is only one store. In each business day, cars are being sold by a team of salespersons. Each transaction would contain information on the date and time of transaction, customer transacted with, and the car that was sold.
+### Option 1
 
-The following are known:
+You are appointed by the applications team in an e-commerce company to create a database infrastructure for their sales transactions. Purchases are being made by members of the e-commerce company on their website. A member can purchase any number of products within a single transaction.
 
-- Each car can only be sold by one salesperson.
-- There are multiple manufacturers’ cars sold.
-- Each car has the following characteristics:
-- Manufacturer
-- Model name
-- Serial number
-- Weight
-- Price
+The following are known for each product listed for sale on the e-commerce website:
+- Item Name
+- Manufacturer Name
+- Cost
+- Weight (in kg)
 
-Each sale transaction contains the following information:
+Each transaction made by a member should minimally contain the following information:
+- Membership ID
+- Item(s) bought
+- Date of transaction
 
-- Customer Name
-- Customer Phone
-- Salesperson
-- Characteristics of car sold
+i) Draw an entity-relationship diagram to represent the data models required to fulfill the above requirements. **Please submit your design in an image format (e.g. `.jpg`/`.png`)**
 
-Set up a PostgreSQL database using the base `docker` image [here](https://hub.docker.com/_/postgres) given the above. We expect at least a `Dockerfile` which will stand up your database with the DDL statements to create the necessary tables. Produce entity-relationship diagrams as necessary to illustrate your design.
+ii) You are also tasked to build and deploy your design in i). Set up your database using PostgreSQL with the Docker [image](https://hub.docker.com/_/postgres) provided. **You are required to submit the DDL statements for the tables, and the necessary scripts to deploy the Docker image (minimally a Dockerfile)**.
 
-Your team also needs you to query some information from the database that you have designed. Note that the business requirements for the database is **not limited** to the 2 queries below, do design your database to account a wide range of business use cases. You are tasked to write a `sql` statement for each of the following task:
+iii) Additionally, you are requested to justify your database design by providing the relevant SQL queries to satisfy some of their requirements. Some of these requirements include:
+- Get the total cost of item(s) purchased by a member in a transaction
+- A manufacturer rebranding resulted in a change of the manufacturer's name only
 
-1. I want to know the list of our customers and their spending.
+**Please submit the queries for use to satisfy the above scenarios.**
 
-2. I want to find out the top 3 car manufacturers that customers bought by sales (quantity) and the sales number for it in the current month.
+### Option 2
+
+You are tasked to design and create the database system required for analytical use cases. Your users are asked to generate reports on HDB resale prices provided in [data.gov.sg](https://data.gov.sg/dataset/resale-flat-prices), to provide a statistical overview of housing prices in Singapore.
+
+Some of the use cases the users are required to report on can be:
+- What are the average resale prices of each flat type in each town?
+- What are the top 10 towns that has resale flats with the oldest lease commence date (by year)
+
+
+**Note**:
+For convenience of testing, the following constraints are given:
+- Date range can be from January 2022 to December 2022 (inclusive)
+- For questions towards time factors, the column {remaining_lease} can be disregarded. We will only look at the lease by year.
+
+
+i) Draw an entity-relationship diagram to represent the data models required to fulfill the above requirements. **Please submit your design in an image format (e.g. `.jpg`/`.png`)**
+
+ii) You are also tasked to build and deploy your design in i). Set up your database using PostgreSQL with the Docker [image](https://hub.docker.com/_/postgres) provided. **You are required to submit the DDL statements for the tables, and the necessary scripts to deploy the Docker image (minimally a Dockerfile)**.
+
+iii) **Please submit the relevant SQL queries to fulfill the use cases listed above.**
 
 ## Section 3: System Design
 
