@@ -160,6 +160,6 @@ Choose one of the following topics and prepare the presentation in relation to t
 2. Explain the value of using any Data Engineering concepts or technology needed to the solve data silos.
 3. What is a Data Warehouse?
 
-This is a 5 minute face to face presentation. The audience includes senior managers, including directors from technical as well as non-technical backgrounds.
+This is a brief 5 minute face to face presentation. The audience includes senior managers, including directors from technical and non-technical backgrounds.
 
-Management is interested to hear what can be done with data engineering to solve the problem described above. Please exercise your own judgement to make any reasonable assumptions and submit the powerpoint presentation.
+**Management is interested to hear how data engineering can be utilised to resolve the problem statement above.** Please exercise your own judgement to make any reasonable assumptions and submit the powerpoint presentation.
