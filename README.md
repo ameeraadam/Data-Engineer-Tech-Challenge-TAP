@@ -151,13 +151,13 @@ Do indicate any assumptions made, and provide detailed explanations to your desi
 
 ## Section 4: What is Data Engineering?
 
-You are tasked to help an agency to consolidate data to reduce data silos over a 3 months period. You will prepare a presentation to executive leadership to influence them to sponsor this data engineering initiative.
+You are tasked to help an agency consolidate data and reduce data de-duplication over a 3 months period. You will prepare a presentation to executive leadership to influence them to sponsor this data engineering initiative.
 
 Your use-case can be any business function that you are familiar with. You should consider the different perspectives of the stakeholders. Do include a definition of the use case as well as be prepared to dive deep in technical considerations.
 Choose one of the following topics and prepare the presentation in relation to the scenario above:
 
 1. What is Data Engineering?
-2. Explain the value of using any Data Engineering concepts or technology needed to the solve data silos.
+2. Explain the value of using any Data Engineering concepts or technology needed to the solve data duplication.
 3. What is a Data Warehouse?
 
 This is a brief 5 minute face to face presentation. The audience includes senior managers, including directors from technical and non-technical backgrounds.
