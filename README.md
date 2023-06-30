@@ -65,6 +65,7 @@ You are required to **process the input data provided in this repository** (`dat
 included to enable easier replication for assessment purposes.**
 
 ## Section 2: Databases 
+**NOTE: Attempt only 1 option!**
 
 ### Option 1
 
