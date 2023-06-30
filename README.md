@@ -27,9 +27,9 @@ Don'ts:
 
 ## Section 1: Data Pipelines
 
-An e-commerce company requires that users sign up for a membership on their website in order to purchase a product from the platform. As a data engineer under this company, you are required to design and implement a product pipeline to process the membership applications submitted by users. 
-
-Applications are batched into a varying number of datasets and dropped into a folder on an hourly basis. You are required to set up a pipeline to ingest, clean, perform validity checks, and create membership IDs for successful applicants. Applications are considered successful if:
+An e-commerce company requires that users sign up for a membership on their website in order to purchase a product from the platform. As a data engineer under this company, you are required to design and implement a product pipeline to process the membership applications submitted by users. You can use any common scheduling tools (e.g. cron, Airflow) to implement the scheduling component.
+ 
+Applications are batched into a varying number of datasets and dropped into a folder on an **hourly** basis. You are required to set up a pipeline to ingest, clean, perform validity checks, and create membership IDs for successful applicants. Applications are considered successful if:
 - mobile number is 8 digits (excluding country code)
 - applicant is over 18 years old as of application year (i.e. 2023)
 - applicant has a valid email (email ends with @emailprovider.com or @emailprovider.net)
@@ -51,11 +51,13 @@ You are required to format processed datasets with the following constraints:
 Additionally, the team requires additional design considerations to the pipeline. Such considerations are:
 - Overall summary notification after each processing job. The summary should be generated as a single `string` object, 
 minimally containing the following details:
+  ```
   - Number of rows processed
   - Number of successful applications, including the name of the file generated
   - Number of unsuccessful applications, including the name of the file generated
   - (*and any other data quality metrics that you may deem necessary*)
-- A **description of a test plan** to ensure robustness of your design
+  ```
+- Include **description of a test plan** to ensure robustness of your design
 
 You are required to process the **input data provided in this repository** (`dataset1.csv`, `dataset2.csv`, and `dataset3.csv`), generating
 at least 2 sets of data: `successful` and `unsuccessful` applications. 
