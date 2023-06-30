@@ -9,7 +9,7 @@ This test is split into 4 sections
 
 ## Submission Guidelines
 
-Please create a Github repository containing your submission and send us an email containing a link to the repository.
+Please create a **private** Github repository containing your submission and send us an email containing a link to the repository. Do note to add the Github handles in the email you've received as collaborators. 
 
 Dos:
 
