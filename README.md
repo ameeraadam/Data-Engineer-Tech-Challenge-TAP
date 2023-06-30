@@ -93,11 +93,18 @@ iii) Additionally, you are requested to justify your database design by providin
 
 ### Option 2
 
-You are tasked to design and create the database system required for analytical use cases. Your users are asked to generate reports on HDB resale prices provided in [data.gov.sg](https://data.gov.sg/dataset/resale-flat-prices), to provide a statistical overview of housing prices in Singapore.
+You are tasked to design and create the database system required for analytical use cases. Your users are asked to generate reports that provide a statistical overview of HDB towns in Singapore. The datasets (available on data.gov.sg) required by users are:
+- [List of Resale Flat Prices](https://beta.data.gov.sg/datasets/189/view)
+- [Median Rent by Town and Flay Type](https://beta.data.gov.sg/datasets/156/view)
+- [HDB Property Information](https://beta.data.gov.sg/datasets/150/view)
+- [List of Licensed Supermarkets](https://beta.data.gov.sg/datasets/1565/view)
+- [List of PHPCs under National COVID-19 Vaccine Program](https://beta.data.gov.sg/datasets/501/view)
 
 Some of the use cases the users are required to report on can be:
-- What are the average resale prices of each flat type in each town?
-- What are the top 10 towns that has resale flats with the oldest lease commence date (by year)
+- What are the cheapest and most convenient towns to purchase a resale flat? 
+- What are the cheapest and most convenient towns to rent a flat?
+    - Convenience is defined by the number of available supermarkets, hawker centers, and clinics
+- Which towns should be prioritised in building new supermarkets and clinics?
 
 
 **Note**:
