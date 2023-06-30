@@ -104,7 +104,7 @@ Some of the use cases the users are required to report on can be:
 - What are the cheapest and most convenient towns to purchase a resale flat? 
 - What are the cheapest and most convenient towns to rent a flat?
     - Convenience is defined by the number of available supermarkets, hawker centers, and clinics
-- Which towns should be prioritised in building new supermarkets and clinics?
+- Which towns should be prioritised in building new hawker centers, supermarkets, and clinics?
 
 
 **Note**:
