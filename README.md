@@ -9,7 +9,13 @@ This test is split into 4 sections
 
 ## Submission Guidelines
 
-Please create a **private** Github repository containing your submission and send us an email containing a link to the repository. Do note to add the Github handles in the email you've received as collaborators. 
+Please create a **private** Github repository containing your submission and send us an email containing a link to the repository. Do note to add the following Github handles as collaborators:
+
+- [@ameeraadam](https://github.com/ameeraadam)
+- [@Andylam2963](https://github.com/Andylam2963)
+- [@dannygoh85](https://github.com/dannygoh85)
+- [@melissayeo](https://github.com/melissayeo)
+- [@tengfone-govtech](https://github.com/tengfone-govtech)
 
 Dos:
 
